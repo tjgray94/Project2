@@ -1,0 +1,64 @@
+<!-- Make a container for all of this -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- These are left aligned: -->
+<div class="container" style="margin-top:30px" style="background-color:rgb(223, 134, 0)">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Grillable Vegan Burger</h2>
+            <input type="checkbox">Favorite this Recipe!
+            <img src="../../assets/Burger.png" width="100%" height="auto" alt="Image could not be rendered"/>
+        </div>
+        <!-- Thiese are right aligned: -->
+        <div class="col-sm-6">
+            <br>
+            <p>Skill level: Intermediate</p>
+            <p>Estimated Cooking Time: 45 minutes</p>
+            <p>Estimated Yield: 10 Burgers</p>
+            <h4>Pairs well with: </h4>
+            <ul>
+                <li>Fries</li>
+                <li>Pasta Salad</li>
+                <li>Potato Salad</li>
+                <li>Corn on the Cob</li>
+            </ul>
+        </div>
+        <!-- From here, these can remain aligned as they are since they are not always visible and merely drop down the container -->
+        <div *ngIf="!show">
+          <div class="container" style="margin-top:4px">
+            <p>Ingredients:</p>
+            <ul>
+                <li>2 cups Raw Walnuts</li>
+                <li>2 tbsp Olive Oil</li>
+                <li>1 Onion, minced</li>
+                <li>Salt and Pepper to taste</li>
+                <li>3 cups Rinsed and Drained Canned Balck Beans</li>
+                <li>2 cups Cooked Rice</li>
+                <li>3/4 cup Vegan Barbeque Sauce</li>
+                <li>2/3 cup Cornflake Crumbs</li>
+                <li>2 tbsp Brown Sugar</li>
+                <li>2 tbsp Chili Powder</li>
+                <li>2 tbsp Ground Paprika</li>
+                <li>2 tbsp Ground Cumin</li>
+            </ul>
+            <p>Directions:</p>
+            <ol type="1">
+                <li>Toast walnuts in a skillet over medium heat, stirring frequently until lightly browned and fragrant, 5 to 7 minutes. 
+                    Crush into fine pieces using a mortar and pestle or food processor.</li>
+                <li>Heat olive oil in the same skillet over medium heat. Cook and stir onion until lightly browned, about 5 minutes. Season with salt and pepper.
+                </li>
+                <li>Mash black beans in a large bowl using a fork. Add walnuts, onion, rice, barbeque sauce, cornflake crumbs, brown sugar, chile powder, paprika, and cumin. 
+                    Season with salt and pepper; stir until mixture is well combined and holds together. Shape into 10 burgers.
+                </li>
+                <li>Preheat an outdoor grill for medium heat and lightly oil the grate. Place burgers on aluminum foil and grill until browned, 5 to 8 minutes per side.</li>
+             </ol>
+        </div>
+    </div>
+    <hr />
+</div>
+<div style="text-align: right">
+    <button (click)="show = !show" style="background-color: rgb(92, 130, 255);">{{show ? "Let's Cook!" : 'Hide'
+        }}</button>
+</div>
+</div>
+

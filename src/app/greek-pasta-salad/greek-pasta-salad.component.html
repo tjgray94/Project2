@@ -1,0 +1,67 @@
+<!-- Make a container for all of this -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- These are left aligned: -->
+<div class="container" style="margin-top:30px" style="background-color:rgb(223, 134, 0)">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Greek Pasta Salad</h2>
+            <input type="checkbox">Favorite this Recipe!
+            <img src="../../assets/GreekPastaSalad.png" width="100%" height="auto" alt="Image could not be rendered"/>
+        </div>
+        <!-- Thiese are right aligned: -->
+        <div class="col-sm-6">
+            <br>
+            <p>Skill level: Easy</p>
+            <p>Estimated Cooking Time: 3 Hours 30 Minutes</p>
+            <p>Estimated Yeild: 8 Servings</p>
+            <h4>Pairs well with: </h4>
+            <ul>
+                <li>Sandwiches/Paninis</li>
+                <li>BBQ Chicken</li>
+                <li>Hamburgers</li>
+                <li>Grilled Hot Dogs</li>
+            </ul>
+        </div>
+        <!-- From here, these can remain aligned as they are since they are not always visible and merely drop down the container -->
+        <div *ngIf="!show">
+          <div class="container" style="margin-top:4px">
+            <p>Ingredients:</p>
+            <ul>
+                <li>2 cups Penne Pasta</li>
+                <li>1/4 cup Red Wine Vinegar</li>
+                <li>1 tbsp Lemon Juice</li>
+                <li>2 cloves Garlic, Crushed</li>
+                <li>2 tsp Dried Oregano</li>
+                <li>1/2 tsp Ground Pepper</li>
+                <li>Salt and Pepper to taste</li>
+                <li>2/3 cup Extra-Virgin Olive Oil</li>
+                <li>10 Cherry Tomatoes, halved</li>
+                <li>1 Small Red Onion, chopped</li>
+                <li>1 Green Bell Pepper, chopped</li>
+                <li>1 Red Bell Pepper, chopped</li>
+                <li>1/2 Cucumber, sliced</li>
+                <li>1/2 cup sliced Black Olives</li>
+                <li>1/2 cup crumbled Feta Cheese</li>
+            </ul>
+            <p>Directions:</p>
+            <ol type="1">
+                <li>Fill a large pot with lightly salted water and bring to a boil over high heat. Once boiling, stir in the penne and return to a boil. 
+                    Cook the pasta uncovered, stirring occasionally, until the pasta has cooked through but is still firm to the bite, roughly 11 minutes. 
+                    Rinse with cold water and drain well in a colander set in the sink.
+                </li>
+                <li>Whisk together the vinegar, lemon juice, garlic, oregano, salt, pepper, and olive oil, then set aside. 
+                    Combine pasta, tomatoes, onion, green and red peppers, cucumber, olives, and feta cheese in a large bowl.
+                    Pour vinaigrette over the pasta and mix together. Cover and chill for 3 hours before serving.
+                </li>
+            </ol>
+        </div>
+    </div>
+    <hr />
+</div>
+<div style="text-align: right">
+    <button (click)="show = !show" style="background-color: rgb(92, 130, 255);">{{show ? "Let's Cook!" : 'Hide'
+        }}</button>
+</div>
+</div>
+

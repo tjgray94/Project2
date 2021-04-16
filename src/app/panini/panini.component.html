@@ -1,0 +1,66 @@
+<!-- Make a container for all of this -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- These are left aligned: -->
+<div class="container" style="margin-top:30px" style="background-color:rgb(223, 134, 0)">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Grilled Panini</h2>
+            <input type="checkbox">Favorite this Recipe!
+            <img src="../../assets/Panini.png" width="100%" height="auto" alt="Image could not be rendered"/>
+        </div>
+        <!-- Thiese are right aligned: -->
+        <div class="col-sm-6">
+            <br>
+            <p>Skill level: Easy</p>
+            <p>Estimated Cooking Time: 16 Minutes</p>
+            <p>Estimated Yield: 1 Panini</p>
+            <h4>Pairs well with: </h4>
+            <ul>
+                <li>Pasta Salad</li>
+                <li>Fruit Salad</li>
+                <li>Sweet Potato Fries</li>    
+            </ul>
+        </div>
+        <!-- From here, these can remain aligned as they are since they are not always visible and merely drop down the container -->
+        <div *ngIf="!show">
+          <div class="container" style="margin-top:4px">
+            <p>Ingredients:</p>
+            <ul>
+                <li>1 tbsp Extra-Light Olive Oil, or as needed</li>
+                <li>2 slices Italian Bread</li>
+                <li>2 tbsp Mayonnaise</li>
+                <li>2 slices Cheddat Cheese</li>
+                <li>3 slices Deli Ham, or more to taste</li>
+                <li>1 slice Firm-Ripe Tomato</li>
+                <li>1 Thin Slice Onion</li>
+                <li>Cooking Spray</li>
+            </ul>
+            <p>Directions:</p>
+            <ol type="1">
+                <li>Drizzle olive oil on one side of each bread slice. Spread t tbsp of mayonnaise on the other side of each slice.
+                    Pile cheese, ham, tomato, and onion on top. Top with the other bread slice, mayo side down.
+                </li>
+                <li>Heat a grill pan over medium-high heat, and spray lightly with cooking spray. Place sandwich on grill, weighing it 
+                    down with a heavy pan. Cook until cheese is melted and grill marks appear, 3 to 5 minutes per side.
+                </li>
+            </ol>
+            <p>Additional notes:</p>
+            <ul>
+                <li>This is a basic recipe, easily changed up with prosciutto, salami, or turkey. This is also great as a veggie sandwich.</li>
+                <li>French bread can be substituted for Italian bread, if preferred.</li>
+                <li>Spreadable cheese can replace mayonnaise, if preferred.</li>
+                <li>Use of a George Foreman grill is recommended, as it eliminates the need for flipping.
+                    If you don't have a grill pan, use a regular cast iron or non-stick skillet.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr />
+</div>
+<div style="text-align: right">
+    <button (click)="show = !show" style="background-color: rgb(92, 130, 255);">{{show ? "Let's Cook!" : 'Hide'
+        }}</button>
+</div>
+</div>
+

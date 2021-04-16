@@ -1,0 +1,70 @@
+<!-- Make a container for all of this -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- These are left aligned: -->
+<div class="container" style="margin-top:30px" style="background-color:rgb(223, 134, 0)">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Baked Chicken Parmesan</h2>
+            <input type="checkbox">Favorite this Recipe!
+            <img src="../../assets/ChickenParm.png" width="100%" height="auto" alt="Image could not be rendered"/>
+        </div>
+        <!-- Thiese are right aligned: -->
+        <div class="col-sm-6">
+            <br>
+            <p>Skill level: Easy</p>
+            <p>Estimated Cooking Time: 50 Minutes</p>
+            <p>Estimated Yeild: 4-5 Boneless Chicken Breasts</p>
+            <h4>Pairs well with: </h4>
+            <ul>
+                <li>Spaghetti</li>
+                <li>Caesar Salad</li>
+                <li>Garlic Bread</li>
+                <li>Broccoli and Cauliflower</li>
+            </ul>
+        </div>
+        <!-- From here, these can remain aligned as they are since they are not always visible and merely drop down the container -->
+        <div *ngIf="!show">
+          <div class="container" style="margin-top:4px">
+            <p>Ingredients:</p>
+            <ul>
+                <li>2 lbs Boneless Chicken Breast Cutlets</li>
+                <li>1/2 tsp Garlic, Granulated</li>
+                <li>1/2 tsp Onion Powder</li>
+                <li>3/4 cup Sauce</li>
+                <li>1 tsp Italian Seasoning</li>
+                <li>1/2 tsp Ground Pepper</li>
+                <li>1/2 tsp Salt</li>
+                <li>1/2 cup Wholegrain Breadcrumbs, Unseasoned</li>
+                <li>3/4 cup Mozzarella Cheese</li>
+                <li>2 tbsp Parmesean, Grated</li>
+                <li>Olive oil (optional)</li>
+            </ul>
+            <p>Directions:</p>
+            <ol type="1">
+                <li>Preheat oven to 375 degrees.</li>
+                <li>Add breadcrumbs, garlic, onion poweder, Italian seasoning, salt, pepper, and parmesean cheese to a
+                    medium
+                    shallow bowl and mix well.</li>
+                <li>Coat a sheet pan with olive oil, ideally using a brush. Alternatively, you can use non-stick
+                    aluminum foil to skip the oil entirely.
+                </li>
+                <li>Dredge each chicken cutlet in the breadcrumb mixture and place them on the sheet pan. Be sure to
+                    discard the
+                    breadcrumb mixture afterwards!</li>
+                <li>Once the oven is heated up, bake the chicken for 15 minutes.</li>
+                <li>Turn the chicken over and bake for another 15 minutes.</li>
+                <li>Remove chicken from the oven, but don't turn the oven off yet! Starting with the sauce, top each
+                    cutlet with sauce and mozzarella cheese.</li>
+                <li>Bake for another 7-10 minutes until the cheese melts.</li>
+                <li>Serve on its own or with your favorite side dish, and enjoy!</li>
+            </ol>
+        </div>
+    </div>
+    <hr />
+</div>
+<div style="text-align: right">
+    <button (click)="show = !show" style="background-color: rgb(92, 130, 255);">{{show ? "Let's Cook!" : 'Hide'
+        }}</button>
+</div>
+</div>

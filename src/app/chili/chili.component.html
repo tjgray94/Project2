@@ -1,0 +1,64 @@
+<!-- Make a container for all of this -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- These are left aligned: -->
+<div class="container" style="margin-top:30px" style="background-color:rgb(223, 134, 0)">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Vegan Sweet Potato Chili</h2>
+            <input type="checkbox">Favorite this Recipe!
+            <img src="../../assets/Chili.png" width="100%" height="auto" alt="Image could not be rendered"/>
+        </div>
+        <!-- Thiese are right aligned: -->
+        <div class="col-sm-6">
+            <br>
+            <p>Skill level: Easy</p>
+            <p>Estimated Cooking Time: 1 Hour 25 Minutes</p>
+            <p>Estimated Yeild: 6 Servings</p>
+            <h4>Pairs well with: </h4>
+            <ul>
+                <li>Cornbread</li>
+                <li>Breadsticks</li>
+                <li>Quesadillas</li>
+                <li>Rice</li>
+            </ul>
+        </div>
+        <!-- From here, these can remain aligned as they are since they are not always visible and merely drop down the container -->
+        <div *ngIf="!show">
+          <div class="container" style="margin-top:4px">
+            <p>Ingredients:</p>
+            <ul>
+                <li>5 tbsp Vegetable Broth</li>
+                <li>1/4 cup 1/2 cup Chopped Onion</li>
+                <li>3 cloves Garlic, minced</li>
+                <li>1/2 Jalapeno Pepper, minced</li>
+                <li>2 tsp Dried Oregano</li>
+                <li>2 Sweet Potatoes, diced</li>
+                <li>2 tbsp Chili Powder</li>
+                <li>1 tbsp Ground Cumin</li>
+                <li>1/2 tsp Dried Oregano</li>
+                <li>1/2 tsp Red Pepper Flakes</li>
+                <li>1 1/2 tsp Tomato Paste</li>
+                <li>2 cups Vegetable Broth</li>
+                <li>1 (28 oz) can Diced Tomatoes</li>
+                <li>2 cups Drained and Rinsed Kidney Beans</li>
+            </ul>
+            <p>Directions:</p>
+            <ol type="1">
+                <li>Heat 5 tbsp of vegetable broth in a large skillet over medium heat. Cook and stir onion, garlic, and jalapeno pepper into the hot broth until slightly tender, about 5 minutes. 
+                    Add sweet potatoes, chili powder, cumin, paprika, oregano, and red pepper flakes to the mixture. Pour remaining 2 cups vegetable broth ove the sweet potato mixture.
+                </li>
+                <li>Bring vegetable broth mixture to a boil, reduce heat to medium, and simmer until sweet potatoes are tender, 20 to 25 minutes. 
+                    Stir tomatoes and kidney beans into the mixture and simmer over low heat until flavors have blended, about 45 minutes.
+                </li>
+            </ol>
+        </div>
+    </div>
+    <hr />
+</div>
+<div style="text-align: right">
+    <button (click)="show = !show" style="background-color: rgb(92, 130, 255);">{{show ? "Let's Cook!" : 'Hide'
+        }}</button>
+</div>
+</div>
+

@@ -1,0 +1,55 @@
+<!-- Make a container for all of this -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- These are left aligned: -->
+<div class="container" style="margin-top:30px" style="background-color:rgb(223, 134, 0)">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Raspberry Cheesecake</h2>
+            <input type="checkbox">Favorite this Recipe!
+            <img src="../../assets/Cheesecake.png" width="100%" height="auto" alt="Image could not be rendered"/>
+        </div>
+        <!-- Thiese are right aligned: -->
+        <div class="col-sm-6">
+            <br>
+            <p>Skill level: Intermediate</p>
+            <p>Estimated Cooking Time: 4 Hours 15 Minutes</p>
+            <p>Estimated Yeild: 1 Cheesecake</p>
+            <h4>Pairs well with: </h4>
+            <ul>
+                <li>Fresh Fruit</li>
+                <li>Chocolate</li>
+                <li>Nuts</li>
+                <li>You really need me to tell you what to eat your cheesecake with?</li>
+            </ul>
+        </div>
+        <!-- From here, these can remain aligned as they are since they are not always visible and merely drop down the container -->
+        <div *ngIf="!show">
+          <div class="container" style="margin-top:4px">
+            <p>Ingredients:</p>
+            <ul>
+                <li>2 (8 oz) packages Cream Cheese</li>
+                <li>1 cup White Sugar</li>
+                <li>1 pint Heavy Cream</li>
+                <li>4 (7 oz) packages Oval Butter Sandwich Cookies with Chocolate Filling</li>
+                <li>1 (21 oz) can Raspberry Pie Filling</li>
+            </ul>
+            <p>Directions:</p>
+            <ol type="1">
+                <li>In a large bowl, cream together cream cheese and sugar. Set aside. 
+                    In a separate bowl, whip cream until stiff peaks form. Fold whipped cream into cream cheese mixture.</li>
+                <li>Line the bottom and sides of a 9 inch springform pan with cookies. Pour half of the cheese mixture over the cookies. 
+                    Top with half the raspberry filling and spread evenly.</li>
+                <li>Place another layer of cookies over raspberry and repeat cheese and raspberry layers. 
+                    Chill in refrigerator 4 hours or overnight before unmolding and serving.</li>
+               </ol>
+        </div>
+    </div>
+    <hr />
+</div>
+<div style="text-align: right">
+    <button (click)="show = !show" style="background-color: rgb(92, 130, 255);">{{show ? "Let's Cook!" : 'Hide'
+        }}</button>
+</div>
+</div>
+

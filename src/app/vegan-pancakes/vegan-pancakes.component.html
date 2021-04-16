@@ -1,0 +1,52 @@
+<!-- Make a container for all of this -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- These are left aligned: -->
+<div class="container" style="margin-top:30px" style="background-color:rgb(223, 134, 0)">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Vegan Pancakes</h2>
+            <input type="checkbox">Favorite this Recipe!
+            <img src="../../assets/Pancake.png" width="100%" height="auto" alt="Image could not be rendered"/>
+        </div>
+        <!-- Thiese are right aligned: -->
+        <div class="col-sm-6">
+            <br>
+            <p>Skill level: Easy</p>
+            <p>Estimated Cooking Time: 15 Minutes</p>
+            <p>Estimated Yield: 9 Pancakes</p>
+            <h4>Pairs well with: </h4>
+            <ul>
+                <li>Fresh Berries</li>
+                <li>Maple Syrup</li>
+                <li>Really any breakfast staple!</li>    
+            </ul>
+        </div>
+        <!-- From here, these can remain aligned as they are since they are not always visible and merely drop down the container -->
+        <div *ngIf="!show">
+          <div class="container" style="margin-top:4px">
+            <p>Ingredients:</p>
+            <ul>
+                <li>1 1/4 cups All-Purpose Flour</li>
+                <li>2 tbsp White Sugar</li>
+                <li>2 tsp Baking Powder</li>
+                <li>1 1/4 cups Water</li>
+                <li>1 tbsp Oil</li>
+            </ul>
+            <p>Directions:</p>
+            <ol type="1">
+                <li>Sift the flour, sugar, baking powder, and salt into a large bowl. Whisk the oil and water together in a small bowl.</li>
+                <li>Make a well in the center of the dry ingredients, then pour in the wet. Stir just until blended; the mixture should be lumpy.</li>
+                <li>Heat a lighlty oiled griddle over medium-high heat. Drop the batter by large spoonfuls onto the griddle, 
+                    and cook until bubbles form and the edges are dry. Flip and cook until browned on the other side. Repeat with the remaining batter.
+                </li>
+            </ol>
+        </div>
+    </div>
+    <hr />
+</div>
+<div style="text-align: right">
+    <button (click)="show = !show" style="background-color: rgb(92, 130, 255);">{{show ? "Let's Cook!" : 'Hide'
+        }}</button>
+</div>
+</div>
