@@ -19,6 +19,10 @@ import { LunchComponent } from './lunch/lunch.component';
 import { DinnerComponent } from './dinner/dinner.component';
 import { VeganComponent } from './vegan/vegan.component';
 import { DessertComponent } from './dessert/dessert.component';
+import { SkillEasyComponent } from './skill-easy/skill-easy.component';
+import { SkillMedComponent } from './skill-med/skill-med.component';
+import { SkillHardComponent } from './skill-hard/skill-hard.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -39,11 +43,15 @@ import { DessertComponent } from './dessert/dessert.component';
     LunchComponent,
     DinnerComponent,
     VeganComponent,
-    DessertComponent
+    DessertComponent,
+    SkillEasyComponent,
+    SkillMedComponent,
+    SkillHardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

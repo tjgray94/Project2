@@ -12,4 +12,6 @@ export class DinnerRollsComponent implements OnInit {
   ngOnInit(): void {
   }
   show: boolean = true;
+  title: string = "Sweet Dinner Rolls"
+
 }

@@ -22,4 +22,16 @@ describe('ChickenParmComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have a title 'Baked Chicken Parmesan'`, () => {
+    const fixture = TestBed.createComponent(ChickenParmComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('Baked Chicken Parmesan');
+  });
+
+  it(`should have a show boolean to be true by default`, () => {
+    const fixture = TestBed.createComponent(ChickenParmComponent);
+    const app = fixture.componentInstance;
+    expect(app.show).toEqual(true);
+  });
 });

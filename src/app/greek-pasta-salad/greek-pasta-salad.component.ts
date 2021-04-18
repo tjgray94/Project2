@@ -12,4 +12,6 @@ export class GreekPastaSaladComponent implements OnInit {
   ngOnInit(): void {
   }
   show: boolean = true
+  title: string = "Greek Pasta Salad"
+
 }

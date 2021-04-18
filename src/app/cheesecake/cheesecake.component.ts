@@ -12,4 +12,6 @@ export class CheesecakeComponent implements OnInit {
   ngOnInit(): void {
   }
   show: boolean = true
+  title: string = "Raspberry Cheesecake"
+
 }

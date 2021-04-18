@@ -12,4 +12,6 @@ export class ChiliComponent implements OnInit {
   ngOnInit(): void {
   }
   show: boolean = true
+  title: string = "Vegan Sweet Potato Chili"
+
 }

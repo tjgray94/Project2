@@ -22,4 +22,16 @@ describe('GreekPastaSaladComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have a title 'Greek Pasta Salad'`, () => {
+    const fixture = TestBed.createComponent(GreekPastaSaladComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('Greek Pasta Salad');
+  });
+
+  it(`should have a show boolean to be true by default`, () => {
+    const fixture = TestBed.createComponent(GreekPastaSaladComponent);
+    const app = fixture.componentInstance;
+    expect(app.show).toEqual(true);
+  });
 });

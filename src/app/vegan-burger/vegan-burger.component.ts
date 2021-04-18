@@ -12,4 +12,6 @@ export class VeganBurgerComponent implements OnInit {
   ngOnInit(): void {
   }
   show: boolean = true
+  title: string = "Grillable Vegan Burger"
+
 }

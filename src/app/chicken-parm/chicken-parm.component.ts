@@ -11,6 +11,7 @@ export class ChickenParmComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  title: string = "Baked Chicken Parmesan"
 
   show: boolean = true;
 }

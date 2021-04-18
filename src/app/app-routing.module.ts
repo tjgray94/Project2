@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { LunchComponent } from './lunch/lunch.component';
 import { VeganComponent } from './vegan/vegan.component';
 import { DessertComponent } from './dessert/dessert.component'
+import { SkillEasyComponent } from './skill-easy/skill-easy.component';
+import { SkillMedComponent } from './skill-med/skill-med.component';
+import { SkillHardComponent } from './skill-hard/skill-hard.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -14,7 +17,9 @@ const routes: Routes = [
   {path:'dinner',component:DinnerComponent},
   {path:'vegan',component:VeganComponent},
   {path:'dessert',component:DessertComponent},
-
+  {path:'easy',component:SkillEasyComponent},
+  {path:'intermediate',component:SkillMedComponent},
+  {path:'hard',component:SkillHardComponent},
 ];
 
 @NgModule({
