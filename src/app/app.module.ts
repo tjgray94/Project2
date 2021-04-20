@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';  
+import {DataTableModule} from 'angular-datatable'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChickenParmComponent } from './chicken-parm/chicken-parm.component';
@@ -23,6 +25,8 @@ import { SkillEasyComponent } from './skill-easy/skill-easy.component';
 import { SkillMedComponent } from './skill-med/skill-med.component';
 import { SkillHardComponent } from './skill-hard/skill-hard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddUserComponent } from './add-user/add-user.component';
+import { AddfavoriteComponent } from './addfavorite/addfavorite.component';
 
 
 @NgModule({
@@ -47,11 +51,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SkillEasyComponent,
     SkillMedComponent,
     SkillHardComponent,
+    AddUserComponent,
+    AddfavoriteComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,  
+    ReactiveFormsModule,  
+    HttpClientModule,  
+    DataTableModule, 
     NgbModule
   ],
   providers: [],
