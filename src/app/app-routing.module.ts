@@ -20,6 +20,7 @@ const routes: Routes = [
   {path:'easy',component:SkillEasyComponent},
   {path:'intermediate',component:SkillMedComponent},
   {path:'hard',component:SkillHardComponent},
+
 ];
 
 @NgModule({

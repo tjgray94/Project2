@@ -46,7 +46,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DessertComponent,
     SkillEasyComponent,
     SkillMedComponent,
-    SkillHardComponent
+    SkillHardComponent,
+    
   ],
   imports: [
     BrowserModule,
