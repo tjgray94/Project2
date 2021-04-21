@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';  
-import {DataTableModule} from 'angular-datatable'; 
+import { DataTableModule } from 'angular-datatable'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChickenParmComponent } from './chicken-parm/chicken-parm.component';
@@ -27,6 +27,7 @@ import { SkillHardComponent } from './skill-hard/skill-hard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddUserComponent } from './add-user/add-user.component';
 import { AddfavoriteComponent } from './addfavorite/addfavorite.component';
+
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { AddfavoriteComponent } from './addfavorite/addfavorite.component';
     ReactiveFormsModule,  
     HttpClientModule,  
     DataTableModule, 
-    NgbModule
+    NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

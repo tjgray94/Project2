@@ -13,6 +13,7 @@ export class IngredientsService {
   constructor(private http:HttpClient) { }
 
   getIngredient(ingredient_name:string): Observable<Ingredients> {
+    
     return this.http.get<Ingredients>(`${this.baseUrl}`+ `ingredients/{ingredient_name}`);
   }
 }

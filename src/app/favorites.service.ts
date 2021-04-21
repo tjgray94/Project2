@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';  
 import { Observable } from 'rxjs'; 
 import { Favorites } from './favorites';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class FavoritesService {
   constructor(private http:HttpClient) { }
 
   addFavorite(fav: object): Observable<Favorites> {
+    
     return this.http.post<Favorites>(`${this.baseUrl}`+`addfavorites`, fav);
   }
 
