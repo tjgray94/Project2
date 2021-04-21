@@ -52,5 +52,12 @@ public class Recipes {
 	public void setSkillLevel(String skillLevel) {
 		this.skillLevel = skillLevel;
 	}
+
+	@Override
+	public String toString() {
+		return "Recipes [recipeId=" + recipeId + ", recipeName=" + recipeName + ", skillLevel=" + skillLevel + "]";
+	}
+	
+	
 	
 }

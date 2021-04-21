@@ -20,16 +20,15 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
 
 import com.group3.springrest.exceptions.ResourceNotFoundException;
 import com.group3.springrest.models.Users;
 import com.group3.springrest.repository.UsersRepository;
 
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("api/u1")
+@RequestMapping("/api/u1")
 public class UsersController {
 	
 //	@Configuration
@@ -57,19 +56,23 @@ public class UsersController {
 		return usersRepository.findAll();
 	}
 	
-	@PostMapping("/createusers")
+	@PostMapping("/createuser")
 	public Users createUser(@Valid @RequestBody Users user) {
+		
 		return usersRepository.save(user);
 	}
 	
 	@GetMapping("/{username}/{passWord}")
 	public ResponseEntity <List<Users>> findByUsername(@PathVariable("username") String username,
 													@PathVariable("passWord") String passWord){
+		System.out.println("hello");
 		List<Users> user = usersRepository.findByUsername(username);
 		List<Users> loginUser = new ArrayList<Users>();
 		if (username != null && user.get(0).getPassWord().equals(passWord)) {
 			loginUser.add(user.get(0));
+			
 		}
+		
 	return new ResponseEntity <List<Users>>(loginUser,HttpStatus.OK);
 	}
 	

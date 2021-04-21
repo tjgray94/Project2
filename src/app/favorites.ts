@@ -1,10 +1,10 @@
 export class Favorites {
 
-    userId:number | any;
-    constructor (userId:number, recipeId:number) {
-		this.userId = userId;
-		this.recipeId = recipeId;
+    username:string | any;
+    constructor (username:string, recipeName:string) {
+		this.username = username;
+		this.recipeName = recipeName;
 	}
 
-    recipeId:number;
+    recipeName:string;
 }

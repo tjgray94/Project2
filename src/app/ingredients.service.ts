@@ -14,6 +14,6 @@ export class IngredientsService {
 
   getIngredient(ingredient_name:string): Observable<Ingredients> {
     
-    return this.http.get<Ingredients>(`${this.baseUrl}`+ `ingredients/{ingredient_name}`);
+    return this.http.get<Ingredients>(`${this.baseUrl}`+ ingredient_name);
   }
 }

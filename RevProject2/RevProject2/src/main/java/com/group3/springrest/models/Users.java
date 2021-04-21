@@ -70,7 +70,7 @@ public class Users {
 		this.username = username;
 	}
 
-	@Column(name = "pass_word", nullable = false)
+	@Column(name = "passWord", nullable = false)
 	public String getPassWord() {
 		return passWord;
 	}
@@ -78,5 +78,13 @@ public class Users {
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
+
+	@Override
+	public String toString() {
+		return "Users [userId=" + userId + ", fName=" + fName + ", lName=" + lName + ", email=" + email + ", username="
+				+ username + ", passWord=" + passWord + "]";
+	}
+	
+	
 	
 }

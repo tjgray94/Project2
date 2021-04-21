@@ -34,4 +34,5 @@ export class AddUserComponent implements OnInit {
     .subscribe((data) => {console.log(data);
     this.user = new User(data.fName, data.lName, data.email, data.username, data.passWord), (error: any) => console.log(error)});
   
-  }}
+  }
+}

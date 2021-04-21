@@ -2566,3 +2566,118 @@ Binding(COMMAND+SHIFT+T,
 
 !ENTRY org.eclipse.ui 2 2 2021-04-21 02:11:25.305
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 02:14:20.949
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.QanypUPR
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 02:14:20.950
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.QanypUPR
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 02:14:20.950
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 02:14:20.950
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.QanypUPR => OK
+!SESSION 2021-04-21 08:34:08.696 -----------------------------------------------
+eclipse.buildId=4.9.0.202012132054
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/tevingray/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/tevingray/.eclipse_keyring
+
+!ENTRY org.eclipse.jface 2 0 2021-04-21 08:34:22.356
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-04-21 08:34:22.356
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10abd94f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47bfde21,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:33.001
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:33.002
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2247d95c[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=573)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:33.017
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:33.159
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.600
+!MESSAGE Boot LS startup time from start to initialized: 7561ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.793
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LzoNyQPEisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.823
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.825
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.825
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.826
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.LzoNyQPE => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.826
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.847
+!MESSAGE classpath=152 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.848
+!MESSAGE buffering callback sts4.classpath.LzoNyQPE RevProject2 false 152
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.848
+!MESSAGE executing callback sts4.classpath.LzoNyQPE 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:34:40.889
+!MESSAGE executing callback sts4.classpath.LzoNyQPE SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2021-04-21 08:40:14.845
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:54:19.853
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:54:19.859
+!MESSAGE classpath=148 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:54:19.860
+!MESSAGE buffering callback sts4.classpath.LzoNyQPE RevProject2 false 148
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:54:19.861
+!MESSAGE executing callback sts4.classpath.LzoNyQPE 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-21 08:54:19.881
+!MESSAGE executing callback sts4.classpath.LzoNyQPE SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-04-21 08:56:15.783
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2086)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

@@ -81,7 +81,7 @@
         </li>
       </ul>
     </div>
-    <input type="text" placeholder="Search for Ingredients!"> <button>Search</button>
+    <input type="text" placeholder="Search for Ingredients" [(ngModel)]="ingredient"> <button (click)="Search()">Search</button>
   </nav>
   <div *ngIf="!show" class="login-form">
     <div>
@@ -104,22 +104,22 @@
       <form>
         <h2 class="text-center">Sign Up</h2>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="First Name" name="fName"required>
+          <input type="text" class="form-control" placeholder="First Name" name="fName"[(ngModel)]="user.fName"required>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Last Name" name="lName"required>
+          <input type="text" class="form-control" placeholder="Last Name" name="lName"[(ngModel)]="user.lName"required>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Email Address" name="email"required>
+          <input type="text" class="form-control" placeholder="Email Address" name="email"[(ngModel)]="user.email"required>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Username" name="username"[(ngModel)]="model.username"required>
+          <input type="text" class="form-control" placeholder="Username" name="username"[(ngModel)]="user.username"required>
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password" name="pass_word"required>
+          <input type="password" class="form-control" placeholder="Password" name="pass_word"[(ngModel)]="user.passWord"required>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block" (click)="nav = !nav">Sign Up</button>
+          <button type="submit" class="btn btn-primary btn-block" (click)="create()">Sign Up</button>
         </div>
       </form>
     </div>
@@ -137,7 +137,7 @@
           <a class="nav-link" (click)="nav = !nav">Sign Out</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">My Favorites</a>
+          <a class="nav-link" (click)="getFavorites()">My Favorites</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/breakfast" routerLinkActive="active">Breakfast</a>
@@ -181,6 +181,9 @@
     <input type="text" placeholder="Search for Ingredients" [(ngModel)]="ingredient"> <button (click)="Search()">Search</button>
   </nav>
 </div>
+<div>
+  <h2>{{recipeName}}</h2>
+  </div>
   <router-outlet></router-outlet>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

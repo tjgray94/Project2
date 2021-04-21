@@ -19,7 +19,7 @@ import com.group3.springrest.exceptions.ResourceNotFoundException;
 import com.group3.springrest.models.Recipes;
 import com.group3.springrest.repository.RecipeRepository;
 
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("api/r1")
 public class RecipeController {

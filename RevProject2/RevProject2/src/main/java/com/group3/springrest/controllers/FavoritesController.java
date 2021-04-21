@@ -23,7 +23,7 @@ import com.group3.springrest.models.Ingredients;
 import com.group3.springrest.models.Users;
 import com.group3.springrest.repository.FavoritesRepository;
 
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("api/f1")
 public class FavoritesController {

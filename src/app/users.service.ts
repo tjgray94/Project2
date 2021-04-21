@@ -17,7 +17,7 @@ export class UsersService {
    })}
 
 loginUser(username: string, password: string):Observable<any>{
-    return this.http.get<any>(this.baseUrl + '/users/' + username + '/' + password)
+    return this.http.get<any>(this.baseUrl + '/' + username + '/' + password);
     }
 
    userData:User | any;

@@ -11,17 +11,17 @@ export class FavoritesService {
 
   // This is the REST server
   private baseUrl = 'http://localhost:9095/api/f1/';  
+  
+  constructor(private http:HttpClient) { }
   httpOption = {headers:new HttpHeaders({
     'Content-Type' : 'application/json'
   })}
-  constructor(private http:HttpClient) { }
 
-  addFavorite(fav: object): Observable<Favorites> {
-    
-    return this.http.post<Favorites>(`${this.baseUrl}`+`addfavorites`, fav);
-  }
+  // addFav(username : string, recipeName: string): Observable<any> {
+  //   return this.http.post<any>(this.baseUrl + 'addfavorites/'+ username + '/' + recipeName);
+  // }
 
-  getFavorites(userId: number): Observable<Favorites> {
-    return this.http.get<Favorites>(`${this.baseUrl}`+ `favorites/{user_id}`);
+  getFavorites(username: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}`+ `favorites/` + username);
   }
 }
