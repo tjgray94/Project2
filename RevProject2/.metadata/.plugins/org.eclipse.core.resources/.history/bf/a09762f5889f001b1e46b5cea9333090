@@ -1,0 +1,9 @@
+package com.group3.springrest.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.group3.springrest.models.Recipes;
+
+public interface RecipeRepository extends JpaRepository<Recipes, Long>{
+
+}

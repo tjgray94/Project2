@@ -1,0 +1,62 @@
+package com.group3.springrest.controllers;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.group3.springrest.exceptions.ResourceNotFoundException;
+import com.group3.springrest.models.Users;
+import com.group3.springrest.repository.UsersRepository;
+
+@RestController
+@RequestMapping("api/v2")
+public class UsersController {
+	
+	@Autowired
+	private UsersRepository usersRepository;
+	
+	//http://localhost:9095/api/v2/users
+	@GetMapping("/users")
+	public List<Users> getAllUsers() {
+		return usersRepository.findAll();
+	}
+	
+	@PostMapping("/users")
+	public Users createUser(@Valid @RequestBody Users user) {
+		return usersRepository.save(user);
+	}
+	
+	@GetMapping("/users/{id}")
+	public ResponseEntity<Users> getUserById(@PathVariable(value = "user_id") long user_id)
+	throws ResourceNotFoundException {
+		Users user = usersRepository.findById(user_id)
+		.orElseThrow(() -> new ResourceNotFoundException ("User not found for this id :: " + user_id));
+	return ResponseEntity.ok().body(user);
+	}
+	
+	@PutMapping("/users/{id}")
+	public ResponseEntity<Users> updateUser(@PathVariable(value = "user_id") long user_id,
+											@Valid @RequestBody Users userDetails) throws ResourceNotFoundException {
+		Users user = usersRepository.findById(user_id)
+		.orElseThrow(() -> new ResourceNotFoundException ("User not found for this id :: " + user_id));
+		
+		user.setfName(userDetails.getfName());
+		user.setlName(userDetails.getlName());
+		user.setEmail(userDetails.getEmail());
+		user.setUsername(userDetails.getUsername());
+		final Users updateUser = usersRepository.save(user);
+		return ResponseEntity.ok(updateUser);
+		
+	}
+
+}

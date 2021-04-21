@@ -1,0 +1,5 @@
+package com.group3.springrest.exceptions;
+
+public class ResourceNotFoundException {
+
+}

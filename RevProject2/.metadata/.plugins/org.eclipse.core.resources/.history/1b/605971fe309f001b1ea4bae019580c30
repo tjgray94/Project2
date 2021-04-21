@@ -1,0 +1,10 @@
+package com.group3.springrest.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Recipes")
+public class Recipes {
+
+}

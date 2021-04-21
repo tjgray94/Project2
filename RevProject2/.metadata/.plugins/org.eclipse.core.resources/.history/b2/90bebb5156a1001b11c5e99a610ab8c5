@@ -1,0 +1,47 @@
+package com.group3.springrest.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Favorites")
+public class Favorites {
+	
+	private long favoritesId;
+	private String recipeName;
+	
+	public Favorites() {
+		
+	}
+	
+	public Favorites(long favoritesId, String recipeName) {
+		this.favoritesId = favoritesId;
+		this.recipeName = recipeName;
+	}
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public long getFavoritesId() {
+		return favoritesId;
+	}
+
+	public void setFavoritesId(long favoritesId) {
+		this.favoritesId = favoritesId;
+	}
+
+	@Column(name = "recipe_name", nullable = false)
+	public String getRecipeName() {
+		return recipeName;
+	}
+
+	public void setRecipeName(String recipeName) {
+		this.recipeName = recipeName;
+	}
+	
+	
+
+}

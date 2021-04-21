@@ -1,0 +1,8 @@
+package com.group3.springrest.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UsersRepository entends JpaRepository<Users, Long> {
+
+}
