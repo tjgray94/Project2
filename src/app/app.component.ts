@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'Recipe Newsletter';
   show: boolean = true;
   login:boolean = true;
+
+  
 }
 
 
